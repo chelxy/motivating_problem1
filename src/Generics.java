@@ -2,18 +2,16 @@ import java.util.Scanner;
 
 import services.PrintService;
 
-public class MotivatingProblem1 {
-	//Motivating problem 2 (type safety & performance)
+public class Generics {
+	//Solution with generics
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		PrintService ps = new PrintService();
+		PrintService<Integer> ps = new PrintService<>();
 		
 		System.out.print("How many values? ");
 		int n = sc.nextInt();
-		
-		ps.addValue("Maria");//Problema da segurança de tipos
 		
 		for(int i = 0; i < n; i++) {
 			Integer value = sc.nextInt();
@@ -21,7 +19,7 @@ public class MotivatingProblem1 {
 		}
 		
 		ps.print();
-		Integer x = (Integer) ps.first();
+		Integer x = ps.first();
 		System.out.println("First: " + x);
 		
 		sc.close();

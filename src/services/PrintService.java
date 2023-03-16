@@ -3,16 +3,16 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintService {
+public class PrintService<T> {
 	
-	private  List<Object> list = new ArrayList<Object>();
+	private  List<T> list = new ArrayList<T>();
 	
-	public void addValue(Object value) {
+	public void addValue(T value) {
 		list.add(value);
 	}
 	
 	//operação first() quue me devolve o primeiro elemento que está no printService
-	public Object first() {
+	public T first() {
 		//Programação defensiva
 		if(list.isEmpty()) {
 			//isEmpty, Verificar se a lista está vazia.
