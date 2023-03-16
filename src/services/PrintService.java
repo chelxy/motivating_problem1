@@ -5,14 +5,14 @@ import java.util.List;
 
 public class PrintService {
 	
-	private  List<Integer> list = new ArrayList<Integer>();
+	private  List<Object> list = new ArrayList<Object>();
 	
-	public void addValue(Integer value) {
+	public void addValue(Object value) {
 		list.add(value);
 	}
 	
 	//operação first() quue me devolve o primeiro elemento que está no printService
-	public int first() {
+	public Object first() {
 		//Programação defensiva
 		if(list.isEmpty()) {
 			//isEmpty, Verificar se a lista está vazia.

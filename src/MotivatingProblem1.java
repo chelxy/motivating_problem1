@@ -3,7 +3,7 @@ import java.util.Scanner;
 import services.PrintService;
 
 public class MotivatingProblem1 {
-
+	//Motivating problem 2 (type safety & performance)
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -13,13 +13,16 @@ public class MotivatingProblem1 {
 		System.out.print("How many values? ");
 		int n = sc.nextInt();
 		
+		ps.addValue("Maria");//Problema da segurança de tipos
+		
 		for(int i = 0; i < n; i++) {
-			int value = sc.nextInt();
+			Integer value = sc.nextInt();
 			ps.addValue(value);
 		}
 		
 		ps.print();
-		System.out.println("First: " + ps.first());
+		Integer x = (Integer) ps.first();
+		System.out.println("First: " + x);
 		
 		sc.close();
 	}
